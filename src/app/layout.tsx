@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <ReactLenis root />
       <body
-        className={`outfit antialiased bg-[#1f1f1f] px-[50px]`}
+        className={`outfit antialiased bg-[#1f1f1f] px-[10px] sm:px-[50px]`}
       >
         {children}
       </body>
