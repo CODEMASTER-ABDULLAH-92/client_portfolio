@@ -49,7 +49,7 @@ const Nav = () => {
 
       {/* Pop-up Section */}
       <div
-        className={`absolute right-6 md:right-12 mt-3 bg-[#1f1f1f] border border-[#2e2e2e] rounded-2xl px-6 py-4 w-[80%] sm:w-[300px] transform transition-all duration-300 ease-in-out ${
+        className={`absolute z-10 right-6 md:right-12 mt-3 bg-[#1f1f1f] border border-[#2e2e2e] rounded-2xl px-6 py-4 w-[80%] sm:w-[300px] transform transition-all duration-300 ease-in-out ${
           openPopUp
             ? "opacity-100 translate-y-0 scale-100"
             : "opacity-0 -translate-y-3 scale-95 pointer-events-none"
