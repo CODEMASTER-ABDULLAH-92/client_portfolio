@@ -3,16 +3,22 @@ import React from "react";
 import sun from "../../../public/sun.svg";
 import crown from "../../../public/crown.svg";
 import Image from "next/image";
+import waseem from "../../../public/waseem.png";
 
 const Hero = () => {
   return (
-    <section className="bg-[#1f1f1f] w-full">
-      <div className="max-w-6xl mx-auto px-5 sm:px-8 md:px-10 lg:px-16 pt-24 sm:pt-28 pb-16 sm:pb-20">
+    <section className=" w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 md:pt-28 pb-16 sm:pb-20 md:pb-24">
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium tracking-tight leading-snug sm:leading-tight text-[#909090]">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-snug sm:leading-tight md:leading-tight text-[#909090]">
           Hi,{" "}
-          <span className="text-white block sm:inline">
-            I’m Waseem Riaz
+          <span className="text-white sm:inline relative">
+            I`m Waseem Riaz 
+            <Image 
+              alt="waseem" 
+              src={waseem} 
+              className="h-10 w-10 md:h-16 md:w-16 rounded-full border-2 border-[#ea8b61] inline-block ml-2 align-middle" 
+            />
           </span>{" "}
           a real estate agent with{" "}
           <span className="text-white">14 years of experience</span> working
@@ -28,15 +34,15 @@ const Hero = () => {
         </h1>
 
         {/* Awards Section */}
-        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-start items-start sm:items-center gap-4 sm:gap-6 mt-10 sm:mt-12">
+        <div className="flex flex-col sm:flex-row sm:flex-wrap justify-start items-start gap-4 mt-10 sm:mt-12 md:mt-14">
           {[
             "Top Producer Award",
             "Client Choice Award",
             "Community Impact Award",
           ].map((award, index) => (
-            <li
+            <div
               key={index}
-              className="list-none flex items-center gap-3 bg-[#2a2a2a] px-4 py-3 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto"
+              className="flex items-center gap-3 bg-gradient-to-br from-[#1a1a1a] to-[#161616] border border-[#2e2e2e] px-4 py-3 rounded-xl hover:border-[#ea8b61]/30 hover:shadow-lg hover:shadow-[#ea8b61]/5 transition-all duration-300 w-full sm:w-auto"
             >
               <Image
                 src={crown}
@@ -45,10 +51,35 @@ const Hero = () => {
                 width={24}
                 alt="Crown"
               />
-              <span className="text-[#909090] text-base sm:text-lg">
+              <span className="text-[#909090] text-base">
                 {award}
               </span>
-            </li>
+            </div>
+          ))}
+        </div>
+
+        {/* Call to Action */}
+        <div className="flex flex-wrap gap-4 mt-10 sm:mt-12">
+          <button className="bg-gradient-to-r from-[#ea8b61] to-[#d87a52] text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-[#ea8b61]/20 transition-all duration-300">
+            View My Listings
+          </button>
+          <button className="border border-[#2e2e2e] text-[#909090] px-6 py-3 rounded-xl font-medium hover:border-[#ea8b61] hover:text-white transition-all duration-300">
+            Contact Me
+          </button>
+        </div>
+
+        {/* Stats Section */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 sm:mt-16">
+          {[
+            { value: "14+", label: "Years Experience" },
+            { value: "500+", label: "Properties Sold" },
+            { value: "$250M+", label: "Volume Closed" },
+            { value: "98%", label: "Client Satisfaction" }
+          ].map((stat, index) => (
+            <div key={index} className="text-center">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">{stat.value}</div>
+              <div className="text-[#909090] text-sm sm:text-base mt-1">{stat.label}</div>
+            </div>
           ))}
         </div>
       </div>

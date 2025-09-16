@@ -39,7 +39,115 @@ const testimonials = [
     img: "https://i.pravatar.cc/150?img=19",
   },
 ];
-
+const testimonials1 = [
+  {
+    id: 8,
+    name: "Bilal Sheikh",
+    message:
+      "I appreciate how much thought has gone into this platform. It looks great, performs well, and has improved how I work every single day.",
+    img: "https://i.pravatar.cc/150?img=8",
+  },
+  {
+    id: 9,
+    name: "Mariam Javed",
+    message:
+      "The features are exactly what I needed. Everything just works, and it feels like it was built specifically for me and my workflow.",
+    img: "https://i.pravatar.cc/150?img=9",
+  },
+  {
+    id: 10,
+    name: "Omar Farooq",
+    message:
+      "Super easy to use and very reliable. I’ve recommended it to several friends already and they all love it too. Excellent job by the developers!",
+    img: "https://i.pravatar.cc/150?img=10",
+  },
+  {
+    id: 11,
+    name: "Hira Malik",
+    message:
+      "The support team is amazing and the product keeps evolving with new features. I feel heard as a user, which is rare these days.",
+    img: "https://i.pravatar.cc/150?img=11",
+  },
+  {
+    id: 12,
+    name: "Zain Raza",
+    message:
+      "From design to performance, everything about this platform feels premium. It has definitely raised the bar for similar products in the market.",
+    img: "https://i.pravatar.cc/150?img=12",
+  },
+  {
+    id: 13,
+    name: "Laiba Khan",
+    message:
+      "This platform helped me manage my work without stress. I genuinely look forward to using it every day. It keeps me focused and productive.",
+    img: "https://i.pravatar.cc/150?img=13",
+  },
+  {
+    id: 14,
+    name: "Ahmed Rauf",
+    message:
+      "The entire experience is smooth and straightforward. No unnecessary complexity, just what you need in the best way possible.",
+    img: "https://i.pravatar.cc/150?img=14",
+  },
+  {
+    id: 20,
+    name: "Hassan Qureshi",
+    message:
+      "I wish I had found this earlier. It’s intuitive, fast, and makes my workflow far less stressful. Definitely worth trying out.",
+    img: "https://i.pravatar.cc/150?img=20",
+  },
+];
+const test3 = [
+  {
+    id: 1,
+    name: "Abdullah",
+    message:
+      "Working with this platform has been a game changer for my business. The UI is clean, fast, and really easy to use. I can now focus on what really matters rather than wasting time on small tasks.",
+    img: "https://i.pravatar.cc/150?img=1",
+  },
+  {
+    id: 2,
+    name: "Ali Khan",
+    message:
+      "I never thought managing my work could be this simple. The team has done an amazing job creating something so powerful yet so simple to navigate and use daily.",
+    img: "https://i.pravatar.cc/150?img=2",
+  },
+  {
+    id: 3,
+    name: "Sara Ahmed",
+    message:
+      "Everything works so smoothly! I was able to onboard my team within minutes. The whole experience feels seamless and thoughtfully designed.",
+    img: "https://i.pravatar.cc/150?img=3",
+  },
+  {
+    id: 4,
+    name: "Hamza Tariq",
+    message:
+      "Honestly, I was surprised at how intuitive the whole platform felt. It saved me hours of repetitive work and improved our team's productivity.",
+    img: "https://i.pravatar.cc/150?img=4",
+  },
+  {
+    id: 5,
+    name: "Ayesha Noor",
+    message:
+      "I’ve tried many tools before, but this one stands out for its simplicity and power. It's reliable, beautiful, and helps me stay organized effortlessly.",
+    img: "https://i.pravatar.cc/150?img=5",
+  },
+  {
+    id: 6,
+    name: "Fatima Zahra",
+    message:
+      "This solution has helped me stay consistent and on track. The clean design and responsiveness make it an enjoyable part of my daily routine.",
+    img: "https://i.pravatar.cc/150?img=6",
+  },
+  {
+    id: 7,
+    name: "Usman Ali",
+    message:
+      "Finally, a tool that actually understands what users need! The experience is smooth, fast, and keeps improving with every update.",
+    img: "https://i.pravatar.cc/150?img=7",
+  },
+]
 const Testimonials = () => {
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-12 md:py-16 lg:py-20">
@@ -111,7 +219,7 @@ const Testimonials = () => {
 
           {/* Second Column - reversed animation */}
           <div className="hidden md:flex flex-col gap-6 animate-marquee-reverse py-4">
-            {[...testimonials, ...testimonials].map((item, index) => (
+            {[...testimonials1, ...testimonials1].map((item, index) => (
               <div
                 key={`col2-${index}`}
                 className="bg-gradient-to-br from-[#1a1a1a] to-[#161616] border border-[#2e2e2e] p-5 rounded-2xl w-full max-w-[300px] mx-auto transition-all duration-300 hover:border-[#ea8b61]/30 hover:shadow-lg hover:shadow-[#ea8b61]/5"
@@ -144,7 +252,7 @@ const Testimonials = () => {
 
           {/* Third Column - hidden on smaller screens */}
           <div className="hidden lg:flex flex-col gap-6 animate-marquee py-4">
-            {[...testimonials, ...testimonials].map((item, index) => (
+            {[...test3, ...test3].map((item, index) => (
               <div
                 key={`col3-${index}`}
                 className="bg-gradient-to-br from-[#1a1a1a] to-[#161616] border border-[#2e2e2e] p-5 rounded-2xl w-full max-w-[300px] mx-auto transition-all duration-300 hover:border-[#ea8b61]/30 hover:shadow-lg hover:shadow-[#ea8b61]/5"

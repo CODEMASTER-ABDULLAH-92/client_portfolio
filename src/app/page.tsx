@@ -1,3 +1,4 @@
+import ContactForm from "./components/Contact";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Nav from "./components/Nav";
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Works />
       <Testimonails/>
+      <ContactForm/>
       <Footer />
     </>
   );
