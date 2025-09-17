@@ -26,53 +26,48 @@ const ContactForm = () => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus("");
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  setSubmitStatus("");
 
-    try {
-      const res = await fetch("/api/quote", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+  try {
+    const res = await fetch("/api/quote", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    // ✅ Call res.json() only ONCE
+    const data = await res.json();
+
+    if (res.ok && data.success) {
+      setSubmitStatus("success");
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        projectType: "",
+        budget: "",
+        timeline: "",
+        message: "",
       });
 
-      const data = await res.json();
-
-      if (res.ok && data.success) {
-        setSubmitStatus("success");
-        setFormData({
-          name: "",
-          email: "",
-          company: "",
-          projectType: "",
-          budget: "",
-          timeline: "",
-          message: "",
-        });
-        const data = await res.json();
-        if (res.ok && data.success) {
-          setSubmitStatus("success");
-          setFormData({ ...formData });
-          toast.success("Thanks for contacting us, we'll reply soon!");
-        } else {
-          console.error("Backend error:", data.error); // 👈 Add this
-          setSubmitStatus("error");
-        }
-
-        toast.success("Thanks For Contacting, We join you soon");
-      } else {
-        setSubmitStatus("error");
-      }
-    } catch (err) {
-      console.error("Form submit error:", err);
+      toast.success("Thanks for contacting us, we'll reply soon!");
+    } else {
+      console.error("Backend error:", data?.error || "Unknown error");
       setSubmitStatus("error");
-      toast.error("Some Internal ServerIssue, Try again after some time");
-    } finally {
-      setIsSubmitting(false);
+      toast.error("Something went wrong. Please try again later.");
     }
-  };
+  } catch (err) {
+    console.error("Form submit error:", err);
+    setSubmitStatus("error");
+    toast.error("Internal server issue. Try again after some time.");
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <div className="w-full max-w-7xl mx-auto px-4 py-12 md:py-16 lg:py-20">
