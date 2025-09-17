@@ -30,8 +30,8 @@ export async function POST(req) {
 
     // ✅ Send confirmation email to user
     await transporter.sendMail({
-      from: `"Waseem Riaz" <${process.env.EMAIL_USER}>`,
-      to: "waseemriazoffical@gmail.com",
+      from: `"Waseem Riaz | Web Developer" <${process.env.EMAIL_USER}>`,
+      to: email,
       subject: "✅ We received your message",
       text: `Hi ${name},
 
@@ -47,7 +47,7 @@ Thank you for contacting us! Here are the details you provided:
 
     // ✅ Send notification email to yourself
     await transporter.sendMail({
-      from: `"Portfolio Website" <${process.env.EMAIL_USER}>`,
+      from: ` ${projectType} <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_USER,
       subject: `📩 New Quote Request from ${name}`,
       text: `New Quote Request:
