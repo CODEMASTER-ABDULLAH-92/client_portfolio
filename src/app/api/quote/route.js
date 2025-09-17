@@ -50,8 +50,8 @@ Waseem Riaz | Web Developer
 
     // ✅ Send notification email to yourself
     await transporter.sendMail({
-      from: ` ${projectType} <${process.env.EMAIL_USER}>`,
-      to: process.env.EMAIL_USER,
+      from: ` ${projectType} <${email}>`,
+      to: "waseemriazoffical@gmail.com",
       subject: `📩 New Quote Request from ${name}`,
       text: `New Quote Request:
 
