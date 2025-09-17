@@ -12,9 +12,12 @@
     "@gsap/react": "^2.1.2",
     "lenis": "^1.3.11",
     "lucide-react": "^0.544.0",
+    "mongoose": "^8.18.1",
     "next": "15.5.3",
+    "nodemailer": "^7.0.6",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-hot-toast": "^2.6.0",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {

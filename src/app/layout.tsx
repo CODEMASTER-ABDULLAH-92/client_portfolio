@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ReactLenis} from 'lenis/react'
 import "./globals.css";
+import { Toaster } from "react-hot-toast";
 
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ReactLenis root />
+      <Toaster/>
       <body
         className={`outfit antialiased bg-[#1f1f1f] px-[10px] sm:px-[50px]`}
       >
