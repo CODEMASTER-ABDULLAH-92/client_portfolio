@@ -42,6 +42,9 @@ Thank you for contacting us! Here are the details you provided:
 📌 Budget: ${budget || "N/A"}
 📌 Timeline: ${timeline || "N/A"}
 📌 Project Details: ${message || "N/A"}
+We look forward to working with you!
+Best regards,
+Waseem Riaz | Web Developer
 `,
     });
 
