@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <ReactLenis root />
-      <Toaster/>
       <body
         className={`outfit antialiased bg-[#1f1f1f] px-[10px] sm:px-[50px]`}
-      >
+        >
+        <Toaster/>
         {children}
       </body>
     </html>

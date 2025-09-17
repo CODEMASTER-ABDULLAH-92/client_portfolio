@@ -14,10 +14,14 @@ const ContactForm = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | "">("");
+  const [submitStatus, setSubmitStatus] = useState<"success" | "error" | "">(
+    ""
+  );
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
   ) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -47,7 +51,17 @@ const ContactForm = () => {
           timeline: "",
           message: "",
         });
-        toast.success("Thanks For Contacting, We join you soon")
+        const data = await res.json();
+        if (res.ok && data.success) {
+          setSubmitStatus("success");
+          setFormData({ ...formData });
+          toast.success("Thanks for contacting us, we'll reply soon!");
+        } else {
+          console.error("Backend error:", data.error); // 👈 Add this
+          setSubmitStatus("error");
+        }
+
+        toast.success("Thanks For Contacting, We join you soon");
       } else {
         setSubmitStatus("error");
       }
@@ -69,7 +83,8 @@ const ContactForm = () => {
             Get Your <span className="text-[#ea8b61]">Quote</span>
           </h2>
           <p className="text-[#909090] mt-3 text-sm md:text-base max-w-xl">
-            Ready to start your project? Fill out the form below and I`ll get back to you within 24 hours.
+            Ready to start your project? Fill out the form below and I`ll get
+            back to you within 24 hours.
           </p>
         </div>
         <hr className="hidden lg:block flex-1 max-w-xs mt-3 mb-4 ml-6 border-t border-[#ea8b61] opacity-70" />
@@ -81,7 +96,12 @@ const ContactForm = () => {
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+            ></path>
           </svg>
           <span className="text-white text-sm ml-2">Quick Response</span>
         </div>
@@ -89,7 +109,10 @@ const ContactForm = () => {
 
       {/* Contact Form */}
       <div className="relative border border-[#2e2e2e] rounded-2xl overflow-hidden p-6 md:p-8 bg-gradient-to-br from-[#121212] to-[#0a0a0a] shadow-2xl shadow-[#ea8b61]/10">
-        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form
+          onSubmit={handleSubmit}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+        >
           {/* Name */}
           <input
             type="text"
