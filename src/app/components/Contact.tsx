@@ -250,7 +250,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
         <div className="p-6 bg-[#121212] border border-[#2e2e2e] rounded-2xl text-center hover:border-[#ea8b61] transition">
           <h3 className="text-lg font-bold text-white mb-2">📧 Email</h3>
-          <p className="text-[#909090]">wriaz7728@gmail.com</p>
+          <p className="text-[#909090]">waseemriazoffical@gmail.com</p>
         </div>
         <div className="p-6 bg-[#121212] border border-[#2e2e2e] rounded-2xl text-center hover:border-[#ea8b61] transition">
           <h3 className="text-lg font-bold text-white mb-2">📞 Phone</h3>

@@ -57,16 +57,16 @@ const Nav = () => {
       >
         <span className="text-[#ea8b61] text-lg font-semibold">Socials</span>
         <ul className="flex flex-col justify-start items-start gap-2 mt-2 text-white">
-          <Link href="/" className="text-lg hover:underline">
-            Twitter
+          <Link href="https://www.facebook.com/share/17Jfupzu4K/" className="text-lg hover:underline">
+          Facebook
           </Link>
           <Link href="/" className="text-lg hover:underline">
             LinkedIn
           </Link>
-          <Link href="/" className="text-lg hover:underline">
+          <Link href="https://github.com/waseemriazoffical-svg" className="text-lg hover:underline">
             GitHub
           </Link>
-          <Link href="/" className="text-lg hover:underline">
+          <Link href="https://www.instagram.com/waseemriaz.134?igsh=YzljYTk1ODg3Zg==" className="text-lg hover:underline">
             Instagram
           </Link>
         </ul>
@@ -76,10 +76,10 @@ const Nav = () => {
         <span className="text-[#ea8b61] text-lg font-semibold">Contact</span>
         <ul className="flex flex-col gap-1 mt-2">
           <li className="text-white hover:underline text-lg">
-            +1 (555) 234-5678
+            +92 3424886134
           </li>
           <li className="text-white hover:underline text-lg">
-            waseem@gmail.com
+            waseemriazoffical@gmail.com
           </li>
         </ul>
       </div>

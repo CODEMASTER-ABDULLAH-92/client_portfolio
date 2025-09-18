@@ -24,7 +24,7 @@ const Footer = () => {
         {/* Social Links */}
         <div className="flex flex-wrap justify-center sm:justify-end items-center gap-5 text-lg">
           <Link
-            href="https://github.com/"
+            href="https://github.com/waseemriazoffical-svg"
             target="_blank"
             className="hover:text-[#ea8b61] transition-colors"
           >
@@ -32,7 +32,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            href="https://facebook.com/"
+            href="https://www.facebook.com/share/17Jfupzu4K/"
             target="_blank"
             className="hover:text-[#ea8b61] transition-colors"
           >
@@ -40,7 +40,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            href="https://instagram.com/"
+            href="https://www.instagram.com/waseemriaz.134?igsh=YzljYTk1ODg3Zg=="
             target="_blank"
             className="hover:text-[#ea8b61] transition-colors"
           >
@@ -61,8 +61,8 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex flex-col  sm:flex-row justify-center  items-center gap-2 pb-6 text-xs sm:text-sm text-gray-500 text-center">
           <span>
-            © {new Date().getFullYear()} | Built with{" "}
-            <span className="text-[#ea8b61]">❤</span> by Abdullah. All rights
+            © {new Date().getFullYear()} <Link href={"https://github.com/CODEMASTER-ABDULLAH-92"}> | Built with{" "}
+            <span className="text-[#ea8b61]">❤</span> by Abdullah. </Link> All rights
             reserved.
           </span>
         </div>
