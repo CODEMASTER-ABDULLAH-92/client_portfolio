@@ -6,13 +6,18 @@ import React, { useState } from "react";
 
 const Nav = () => {
   const [openPopUp, setOpenPopUp] = useState(false);
-  const time = new Date();
+ const time = new Date();
 
-  // ✅ Format time with leading zeros (HH:MM)
-  const formattedTime = `${time.getHours().toString().padStart(2, "0")}:${time
-    .getMinutes()
-    .toString()
-    .padStart(2, "0")}`;
+// ✅ Convert to 12-hour format with AM/PM
+let hours = time.getHours();
+const minutes = time.getMinutes().toString().padStart(2, "0");
+const ampm = hours >= 12 ? "PM" : "AM";
+
+hours = hours % 12; // Convert 24h -> 12h
+hours = hours ? hours : 12; // Convert 0 to 12 (midnight case)
+
+const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes} ${ampm}`;
+
 
   return (
     <nav className="w-full ">

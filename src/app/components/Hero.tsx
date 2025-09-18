@@ -20,10 +20,10 @@ const Hero = () => {
               className="h-10 w-10 md:h-16 md:w-16 rounded-full border-2 border-[#ea8b61] inline-block ml-2 align-middle" 
             />
           </span>{" "}
-          a real estate agent with{" "}
-          <span className="text-white">14 years of experience</span> working
-          with{" "}
-          <span className="text-white">top agencies.</span>
+          a Website Developer with{" "}
+          <span className="text-white">14+ years of experience</span> building
+          scalable, high-performance{" "}
+          <span className="text-white">websites & web applications.</span>
           <Image
             alt="Sun"
             src={sun}
@@ -36,9 +36,9 @@ const Hero = () => {
         {/* Awards Section */}
         <div className="flex flex-col sm:flex-row sm:flex-wrap justify-start items-start gap-4 mt-10 sm:mt-12 md:mt-14">
           {[
-            "Top Producer Award",
-            "Client Choice Award",
-            "Community Impact Award",
+            "Best Full-Stack Developer",
+            "Top Rated Freelancer",
+            "Open Source Contributor",
           ].map((award, index) => (
             <div
               key={index}
@@ -61,20 +61,20 @@ const Hero = () => {
         {/* Call to Action */}
         <div className="flex flex-wrap gap-4 mt-10 sm:mt-12">
           <button className="bg-gradient-to-r from-[#ea8b61] to-[#d87a52] text-white px-6 py-3 rounded-xl font-medium hover:shadow-lg hover:shadow-[#ea8b61]/20 transition-all duration-300">
-            View My Listings
+            View My Projects
           </button>
           <button className="border border-[#2e2e2e] text-[#909090] px-6 py-3 rounded-xl font-medium hover:border-[#ea8b61] hover:text-white transition-all duration-300">
-            Contact Me
+            Hire Me
           </button>
         </div>
 
         {/* Stats Section */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 sm:mt-16">
           {[
-            { value: "14+", label: "Years Experience" },
-            { value: "500+", label: "Properties Sold" },
-            { value: "$250M+", label: "Volume Closed" },
-            { value: "98%", label: "Client Satisfaction" }
+            { value: "14+", label: "Years Coding Experience" },
+            { value: "300+", label: "Websites Developed" },
+            { value: "120+", label: "Happy Clients" },
+            { value: "99%", label: "Project Success Rate" }
           ].map((stat, index) => (
             <div key={index} className="text-center">
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">{stat.value}</div>
