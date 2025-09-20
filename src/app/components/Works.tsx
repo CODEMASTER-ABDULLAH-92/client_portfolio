@@ -289,22 +289,6 @@ const Works = () => {
                 <p className="text-[#909090] mt-3 text-sm leading-relaxed">
                   {project.desc}
                 </p>
-
-                <a
-                  href={project.link}
-                  className="inline-flex items-center mt-5 text-[#ea8b61] font-medium text-sm hover:text-white transition-colors duration-300 group/view"
-                >
-                  View Project
-                  <svg
-                    className="ml-2 w-4 h-4 group-hover/view:translate-x-1 transition-transform duration-300"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                  </svg>
-                </a>
               </div>
             </div>
           ))}
