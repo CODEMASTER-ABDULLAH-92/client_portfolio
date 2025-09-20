@@ -30,7 +30,7 @@ export async function POST(req) {
 
     // ✅ Send confirmation email to user
     await transporter.sendMail({
-      from: `"Waseem Riaz | Web Developer" <>`,
+      from: `"Waseem Riaz | Web Developer" <${process.env.EMAIL_USER}>`,
       to: email,
       subject: "✅ We received your message",
       text: `Hi ${name},
