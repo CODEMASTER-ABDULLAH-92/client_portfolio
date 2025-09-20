@@ -61,7 +61,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex flex-col  sm:flex-row justify-center  items-center gap-2 pb-6 text-xs sm:text-sm text-gray-500 text-center">
           <span>
-            © {new Date().getFullYear()} <Link href={"https://github.com/CODEMASTER-ABDULLAH-92"}> | Built with{" "}
+            © {new Date().getFullYear()} <Link href={"https://github.com/CODEMASTER-ABDULLAH-92"}> | Coded with{" "}
             <span className="text-[#ea8b61]">❤</span> by Abdullah. </Link> All rights
             reserved.
           </span>
