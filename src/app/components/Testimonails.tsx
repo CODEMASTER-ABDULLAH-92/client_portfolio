@@ -327,13 +327,6 @@ const Testimonials = () => {
           }
         `}</style>
       </div>
-
-      {/* Call to action */}
-      <div className="flex justify-center mt-10">
-        <button className="px-6 py-3 bg-gradient-to-r from-[#ea8b61] to-[#d87a52] text-white rounded-lg font-medium hover:shadow-lg hover:shadow-[#ea8b61]/20 transition-all duration-300">
-          Read More Stories
-        </button>
-      </div>
     </div>
   );
 };
