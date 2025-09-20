@@ -17,7 +17,7 @@ const Hero = () => {
             <Image 
               alt="waseem" 
               src={waseem} 
-              className="h-10 w-10 md:h-16 md:w-16 rounded-full border-2 border-[#ea8b61] inline-block ml-2 align-middle" 
+              className="h-10 w-10 md:h-20 md:w-20 rounded-full border-2 border-[#ea8b61] inline-block ml-2 align-middle" 
             />
           </span>{" "}
           a Website Developer with{" "}

@@ -65,7 +65,7 @@ const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes} ${ampm}`;
           <Link href="https://www.facebook.com/share/17Jfupzu4K/" className="text-lg hover:underline">
           Facebook
           </Link>
-          <Link href="/" className="text-lg hover:underline">
+          <Link href="https://www.linkedin.com/in/waseem-riaz-935798243/" className="text-lg hover:underline">
             LinkedIn
           </Link>
           <Link href="https://github.com/waseemriazoffical-svg" className="text-lg hover:underline">

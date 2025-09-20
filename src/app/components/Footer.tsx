@@ -48,7 +48,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/waseem-riaz-935798243/"
             target="_blank"
             className="hover:text-[#ea8b61] transition-colors"
           >
