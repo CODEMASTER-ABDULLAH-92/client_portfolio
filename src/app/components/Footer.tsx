@@ -24,7 +24,7 @@ const Footer = () => {
         {/* Social Links */}
         <div className="flex flex-wrap justify-center sm:justify-end items-center gap-5 text-lg">
           <Link
-            href="https://github.com/waseemriazoffical-svg"
+            href="https://github.com/CODEMASTER-ABDULLAH-92/"
             target="_blank"
             className="hover:text-[#ea8b61] transition-colors"
           >
