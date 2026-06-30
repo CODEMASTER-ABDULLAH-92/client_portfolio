@@ -7,6 +7,9 @@
   font-style: normal;
 }
 
+*{
+  scroll-behavior: smooth;
+}
 
 
 /* @theme {

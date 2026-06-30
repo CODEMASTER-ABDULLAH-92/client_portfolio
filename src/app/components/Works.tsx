@@ -11,51 +11,57 @@ if (typeof window !== "undefined") {
 const projects = [
   {
     id: 1,
-    title: "WordPress Real Estate Platform",
-    desc: "A custom WordPress theme with IDX integration for property listings and advanced search functionality.",
-    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop&auto=format&q=80",
-    tags: ["WordPress", "PHP", "JavaScript"],
-    link: "#"
+    title: "eBay Account Creation & Setup",
+    desc: "Complete eBay account creation with business verification, store setup, and initial listing configuration for dropshipping success.",
+    img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&auto=format&q=80",
+    tags: ["Account Setup", "eBay", "Verification"],
+    link: "#",
+    result: "100+ accounts created"
   },
   {
     id: 2,
-    title: "Modern Portfolio Website",
-    desc: "A responsive portfolio with smooth animations, dark mode, and CMS integration for blog management.",
-    img: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop&auto=format&q=80",
-    tags: ["React", "Next.js", "Tailwind CSS"],
-    link: "#"
+    title: "eBay Defect Removal Service",
+    desc: "Expert removal of account defects, policy violations, and performance issues to restore Top-Rated Seller status and boost sales.",
+    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop&auto=format&q=80",
+    tags: ["Defect Removal", "Policy Compliance", "Performance"],
+    link: "#",
+    result: "95% defect removal rate"
   },
   {
     id: 3,
-    title: "E-Commerce Store",
-    desc: "A WooCommerce store with custom payment gateway, product filtering, and inventory management.",
-    img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&auto=format&q=80",
-    tags: ["WooCommerce", "PHP", "jQuery"],
-    link: "#"
+    title: "Negative Feedback Removal",
+    desc: "Professional strategy to identify, respond to, and remove negative feedback professionally to protect your eBay reputation.",
+    img: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop&auto=format&q=80",
+    tags: ["Feedback Removal", "Reputation", "Customer Service"],
+    link: "#",
+    result: "90% feedback resolution"
   },
   {
     id: 4,
-    title: "SaaS Application Dashboard",
-    desc: "A comprehensive dashboard UI with data visualization, user management, and reporting features.",
+    title: "eBay Customer Support Solutions",
+    desc: "24/7 customer support management for eBay stores including message handling, dispute resolution, and customer satisfaction strategies.",
     img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&auto=format&q=80",
-    tags: ["React", "Chart.js", "Firebase"],
-    link: "#"
+    tags: ["Customer Support", "Dispute Resolution", "Management"],
+    link: "#",
+    result: "98% customer satisfaction"
   },
   {
     id: 5,
-    title: "Travel Booking Website",
-    desc: "A travel booking platform with destination guides, booking system, and user reviews.",
-    img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop&auto=format&q=80",
-    tags: ["HTML/CSS", "JavaScript", "Node.js"],
-    link: "#"
+    title: "eBay Listing Creation & Optimization",
+    desc: "Professional eBay listing creation with SEO-optimized titles, descriptions, high-quality images, and pricing strategies for maximum visibility.",
+    img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&auto=format&q=80",
+    tags: ["Listing Creation", "SEO", "Optimization"],
+    link: "#",
+    result: "300% increase in visibility"
   },
   {
     id: 6,
-    title: "Restaurant Reservation System",
-    desc: "Online reservation system with table management, menu display, and admin dashboard.",
-    img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=600&fit=crop&auto=format&q=80",
-    tags: ["React", "MongoDB", "Express"],
-    link: "#"
+    title: "eBay Account Suspension Recovery",
+    desc: "Expert support to recover suspended eBay accounts with proper documentation, appeals, and compliance restoration strategies.",
+    img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop&auto=format&q=80",
+    tags: ["Suspension Recovery", "Appeals", "Compliance"],
+    link: "#",
+    result: "85% recovery rate"
   },
 ];
 
@@ -63,36 +69,33 @@ const Works = () => {
   const sectionRef = useRef(null);
 
   return (
-    <section ref={sectionRef} className="w-full py-16 md:py-20 lg:py-24 overflow-hidden bg-gradient-to-b">
+    <section id="services" ref={sectionRef} className="w-full py-16 md:py-20 lg:py-24 overflow-hidden bg-gradient-to-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-14">
           <div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-              Featured <span className="text-[#ea8b61]">Projects</span>
+              Our Dropshipping <span className="text-[#ea8b61]">Solutions</span>
             </h2>
             <p className="text-[#909090] mt-3 text-sm md:text-base max-w-xl">
-              A selection of my recent work in web development and design. Each project represents
-              my commitment to creating visually appealing and highly functional digital experiences.
+              Specialized services for eBay sellers and dropshippers to optimize, grow, and protect their business.
+              We've helped hundreds of sellers achieve their goals.
             </p>
           </div>
 
-          {/* Stylish Divider - Only show on larger screens */}
+          {/* Stylish Divider */}
           <hr className="hidden lg:block flex-1 max-w-xs mt-3 mb-4 ml-6 border-t border-[#ea8b61] opacity-70" />
           
           {/* Decorative elements */}
           <div className="hidden md:flex items-center gap-2">
-            {[1, 2, 3, 4, 5].map((star) => (
-              <svg
-                key={star}
-                className="w-5 h-5 text-[#ea8b61]"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-              >
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
-            <span className="text-white text-sm ml-2">24 Projects</span>
+            <svg
+              className="w-5 h-5 text-[#ea8b61]"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+            <span className="text-white text-sm ml-2">500+ Success Stories</span>
           </div>
         </div>
 
@@ -126,6 +129,11 @@ const Works = () => {
                     </span>
                   ))}
                 </div>
+
+                {/* Result Badge */}
+                <div className="absolute bottom-3 left-3 bg-black/80 backdrop-blur-sm text-xs text-white px-3 py-1.5 rounded-lg border border-[#ea8b61]/30">
+                  📊 {project.result}
+                </div>
               </div>
 
               {/* Card Content */}
@@ -144,7 +152,7 @@ const Works = () => {
         {/* Call to action */}
         <div className="flex justify-center mt-12 md:mt-16">
           <button className="px-8 py-3.5 bg-gradient-to-r from-[#ea8b61] to-[#d87a52] text-white rounded-xl font-medium hover:shadow-lg hover:shadow-[#ea8b61]/20 transition-all duration-300 flex items-center gap-2">
-            View All Projects
+            View All Services
             <svg 
               className="w-5 h-5" 
               fill="none" 

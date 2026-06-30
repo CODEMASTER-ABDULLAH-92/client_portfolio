@@ -6,10 +6,14 @@ const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
-    projectType: "",
-    budget: "",
-    timeline: "",
+    phone: "",
+    country:"",
+    businessName: "",
+    issueType: "",
+    accountPlatform: "",
+    monthlyRevenue: "",
+    productCategory: "",
+    urgency: "",
     message: "",
   });
 
@@ -26,60 +30,62 @@ const ContactForm = () => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
-  setSubmitStatus("");
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus("");
 
-  try {
-    const res = await fetch("/api/quote", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    // ✅ Call res.json() only ONCE
-    const data = await res.json();
-
-    if (res.ok && data.success) {
-      setSubmitStatus("success");
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        projectType: "",
-        budget: "",
-        timeline: "",
-        message: "",
+    try {
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
 
-      toast.success("Thanks for contacting us, we'll reply soon!");
-    } else {
-      console.error("Backend error:", data?.error || "Unknown error");
-      setSubmitStatus("error");
-      toast.error("Something went wrong. Please try again later.");
-    }
-  } catch (err) {
-    console.error("Form submit error:", err);
-    setSubmitStatus("error");
-    toast.error("Internal server issue. Try again after some time.");
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+      const data = await res.json();
 
+      if (res.ok && data.success) {
+        setSubmitStatus("success");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          businessName: "",
+          issueType: "",
+          accountPlatform: "",
+          monthlyRevenue: "",
+          productCategory: "",
+          urgency: "",
+          message: "",
+          country:""
+        });
+
+        toast.success("Thanks for reaching out! Our dropshipping experts will contact you within 24 hours.");
+      } else {
+        console.error("Backend error:", data?.error || "Unknown error");
+        setSubmitStatus("error");
+        toast.error("Something went wrong. Please try again later.");
+      }
+    } catch (err) {
+      console.error("Form submit error:", err);
+      setSubmitStatus("error");
+      toast.error("Internal server issue. Try again after some time.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-12 md:py-16 lg:py-20">
+    <div id="contact_form" className="w-full max-w-7xl mx-auto px-4 py-12 md:py-16 lg:py-20">
       {/* Header Section */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-14">
         <div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight">
-            Get Your <span className="text-[#ea8b61]">Quote</span>
+            Get Your <span className="text-[#ea8b61]">Dropshipping</span> Consultation
           </h2>
           <p className="text-[#909090] mt-3 text-sm md:text-base max-w-xl">
-            Ready to start your project? Fill out the form below and I`ll get
-            back to you within 24 hours.
+            Struggling with your dropshipping or eBay business? Our expert team is here to help. 
+            Fill out the form and we'll get back to you within 24 hours.
           </p>
         </div>
         <hr className="hidden lg:block flex-1 max-w-xs mt-3 mb-4 ml-6 border-t border-[#ea8b61] opacity-70" />
@@ -98,7 +104,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
             ></path>
           </svg>
-          <span className="text-white text-sm ml-2">Quick Response</span>
+          <span className="text-white text-sm ml-2">Expert Consultation</span>
         </div>
       </div>
 
@@ -112,73 +118,152 @@ const handleSubmit = async (e: React.FormEvent) => {
           <input
             type="text"
             name="name"
-            placeholder="Your Name"
+            placeholder="Your Full Name *"
             value={formData.name}
             onChange={handleChange}
             className="p-3 rounded-xl bg-[#1b1b1b] text-white border border-[#333] focus:outline-none focus:border-[#ea8b61] transition"
             required
           />
+          
           {/* Email */}
           <input
             type="email"
             name="email"
-            placeholder="Your Email"
+            placeholder="Your Email Address *"
             value={formData.email}
             onChange={handleChange}
             className="p-3 rounded-xl bg-[#1b1b1b] text-white border border-[#333] focus:outline-none focus:border-[#ea8b61] transition"
             required
           />
-          {/* Company */}
+          
+          {/* Phone */}
+          <input
+            type="tel"
+            required
+            name="phone"
+            placeholder="Phone Number (required)"
+            value={formData.phone}
+            onChange={handleChange}
+            className="p-3 required rounded-xl bg-[#1b1b1b] text-white border border-[#333] focus:outline-none focus:border-[#ea8b61] transition"
+          />
+          {/* Country */}
           <input
             type="text"
-            name="company"
-            placeholder="Company (Optional)"
-            value={formData.company}
+            required
+            name="country"
+            placeholder="Country (required)"
+            value={formData.country}
+            onChange={handleChange}
+            className="p-3 required rounded-xl bg-[#1b1b1b] text-white border border-[#333] focus:outline-none focus:border-[#ea8b61] transition"
+          />
+          
+          {/* Business Name */}
+          <input
+            type="text"
+            name="businessName"
+            placeholder="Business Name (Optional)"
+            value={formData.businessName}
             onChange={handleChange}
             className="p-3 rounded-xl bg-[#1b1b1b] text-white border border-[#333] focus:outline-none focus:border-[#ea8b61] transition"
           />
-          {/* Project Type */}
+
+          {/* Issue Type */}
           <select
-            name="projectType"
-            value={formData.projectType}
+            name="issueType"
+            value={formData.issueType}
+            onChange={handleChange}
+            className="p-3 rounded-xl bg-[#1b1b1b] text-white border border-[#333] focus:outline-none focus:border-[#ea8b61] transition"
+            required
+          >
+            <option value="">Select Your Issue Type *</option>
+            <option value="account-setup">New Account Creation</option>
+            <option value="ebay-defect-remove">eBay Defect Remove</option>
+            <option value="ebay-negative-remove">eBay Negative Feedback Remove</option>
+            <option value="account-suspension">Account Suspension / Policy Violation</option>
+            <option value="listing-optimization">Listing Optimization</option>
+            <option value="product-sourcing">Product Sourcing</option>
+            <option value="order-fulfillment">Order Fulfillment Issues</option>
+            <option value="inventory-management">Inventory Management</option>
+            <option value="sales-growth">Sales Growth Strategy</option>
+            <option value="customer-service">Customer Service Issues</option>
+            <option value="policy-compliance">eBay Policy Compliance</option>
+            <option value="other">Other</option>
+          </select>
+
+          {/* Account Platform */}
+          <select
+            name="accountPlatform"
+            value={formData.accountPlatform}
             onChange={handleChange}
             className="p-3 rounded-xl bg-[#1b1b1b] text-white border border-[#333] focus:outline-none focus:border-[#ea8b61] transition"
           >
-            <option value="">Select Project Type</option>
-            <option value="Website">Website</option>
-            <option value="Mobile App">Mobile App</option>
-            <option value="Dashboard">Dashboard</option>
-            <option value="WordPress">Word Press </option>
-            <option value="Other">Other</option>
+            <option value="">Select Your Platform</option>
+            <option value="ebay">eBay</option>
+            <option value="amazon">Amazon</option>
+            <option value="shopify">Shopify</option>
+            <option value="walmart">Walmart</option>
+            <option value="etsy">Etsy</option>
+            <option value="other">Other</option>
           </select>
-          {/* Budget */}
-          <input
-            type="text"
-            name="budget"
-            placeholder="Budget (USD)"
-            value={formData.budget}
+
+          {/* Monthly Revenue */}
+          <select
+            name="monthlyRevenue"
+            value={formData.monthlyRevenue}
             onChange={handleChange}
             className="p-3 rounded-xl bg-[#1b1b1b] text-white border border-[#333] focus:outline-none focus:border-[#ea8b61] transition"
-          />
-          {/* Timeline */}
-          <input
-            type="text"
-            name="timeline"
-            placeholder="Timeline"
-            value={formData.timeline}
+          >
+            <option value="">Estimated Monthly Revenue</option>
+            <option value="0-1000">$0 - $1,000</option>
+            <option value="1000-5000">$1,000 - $5,000</option>
+            <option value="5000-10000">$5,000 - $10,000</option>
+            <option value="10000-50000">$10,000 - $50,000</option>
+            <option value="50000+">$50,000+</option>
+          </select>
+
+          {/* Product Category */}
+          <select
+            name="productCategory"
+            value={formData.productCategory}
             onChange={handleChange}
             className="p-3 rounded-xl bg-[#1b1b1b] text-white border border-[#333] focus:outline-none focus:border-[#ea8b61] transition"
-          />
+          >
+            <option value="">Primary Product Category</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing & Fashion</option>
+            <option value="home-garden">Home & Garden</option>
+            <option value="toys">Toys & Hobbies</option>
+            <option value="health-beauty">Health & Beauty</option>
+            <option value="sports">Sports & Outdoors</option>
+            <option value="automotive">Automotive</option>
+            <option value="collectibles">Collectibles</option>
+            <option value="other">Other</option>
+          </select>
+
+          {/* Urgency */}
+          <select
+            name="urgency"
+            value={formData.urgency}
+            onChange={handleChange}
+            className="p-3 rounded-xl bg-[#1b1b1b] text-white border border-[#333] focus:outline-none focus:border-[#ea8b61] transition"
+          >
+            <option value="">Select Urgency Level</option>
+            <option value="standard">Standard (3-5 days)</option>
+            <option value="within-week">Within a Week</option>
+            <option value="urgent">Urgent (ASAP)</option>
+          </select>
+
           {/* Message */}
           <textarea
             name="message"
-            placeholder="Tell me about your project"
+            placeholder="Describe your dropshipping/eBay issue in detail... *"
             value={formData.message}
             onChange={handleChange}
             rows={5}
             className="md:col-span-2 p-3 rounded-xl bg-[#1b1b1b] text-white border border-[#333] focus:outline-none focus:border-[#ea8b61] transition"
             required
           />
+
           {/* Submit Button */}
           <div className="md:col-span-2">
             <button
@@ -212,7 +297,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 </>
               ) : (
                 <>
-                  Get Free Quote
+                  Get Free Consultation
                   <svg
                     className="w-5 h-5"
                     fill="none"
@@ -233,10 +318,10 @@ const handleSubmit = async (e: React.FormEvent) => {
           </div>
         </form>
 
-        {/* ✅ Status Messages */}
+        {/* Status Messages */}
         {submitStatus === "success" && (
           <div className="mt-6 p-4 bg-green-900/20 border border-green-800 rounded-xl text-green-400 text-center">
-            ✅ Thank you for your inquiry! I`ll get back to you within 24 hours.
+            ✅ Thank you for your inquiry! Our dropshipping experts will contact you within 24 hours.
           </div>
         )}
         {submitStatus === "error" && (
@@ -246,7 +331,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         )}
       </div>
 
-      {/* 🔥 Your Info Cards — kept EXACTLY as you had */}
+      {/* Services/Expertise Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
         <div className="p-6 bg-[#121212] border border-[#2e2e2e] rounded-2xl text-center hover:border-[#ea8b61] transition">
           <h3 className="text-lg font-bold text-white mb-2">📧 Email</h3>
@@ -259,6 +344,40 @@ const handleSubmit = async (e: React.FormEvent) => {
         <div className="p-6 bg-[#121212] border border-[#2e2e2e] rounded-2xl text-center hover:border-[#ea8b61] transition">
           <h3 className="text-lg font-bold text-white mb-2">🌍 Location</h3>
           <p className="text-[#909090]">Faisalabad, Pakistan</p>
+        </div>
+      </div>
+
+      {/* Additional Info Section - What We Help With */}
+      <div className="mt-10 p-6 bg-[#121212] border border-[#2e2e2e] rounded-2xl">
+        <h3 className="text-xl font-bold text-white mb-4 text-center">🚀 How We Can Help Your Dropshipping Business</h3>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-[#909090] text-sm">
+          <div className="flex items-center gap-2">
+            <span className="text-[#ea8b61]">✓</span> eBay Account Management
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[#ea8b61]">✓</span> Listing Optimization
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[#ea8b61]">✓</span> Product Sourcing
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[#ea8b61]">✓</span> Order Fulfillment
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[#ea8b61]">✓</span> Inventory Management
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[#ea8b61]">✓</span> Sales Growth Strategy
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[#ea8b61]">✓</span> Policy Compliance
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[#ea8b61]">✓</span> Customer Service Solutions
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-[#ea8b61]">✓</span> Account Suspension Recovery
+          </div>
         </div>
       </div>
     </div>

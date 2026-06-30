@@ -5,20 +5,20 @@ import Nav from "./components/Nav";
 import Testimonails from "./components/Testimonails";
 import WhatsAppIcon from "./components/Whatsapp";
 import Works from "./components/Works";
-
+import LogoSlider from "./components/Silder"
 export default function Home() {
   return (
     <>
       <Nav />
       <WhatsAppIcon 
         phoneNumber="+923424886134" 
-        message="Hi! I have a question about your services."
+        message="Describe your eBay or dropshipping issue in detail..."
         offsetX="24px"
         offsetY="24px"
       />
-
       <Hero />
       <Works />
+{/* <LogoSlider/> */}
       <Testimonails/>
       <ContactForm/>
       <Footer />
