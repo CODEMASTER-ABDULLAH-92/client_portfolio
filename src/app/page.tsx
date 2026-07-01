@@ -5,7 +5,7 @@ import Nav from "./components/Nav";
 import Testimonails from "./components/Testimonails";
 import WhatsAppIcon from "./components/Whatsapp";
 import Works from "./components/Works";
-import LogoSlider from "./components/Silder"
+// import LogoSlider from "./components/Silder"
 export default function Home() {
   return (
     <>

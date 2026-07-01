@@ -85,7 +85,7 @@ const ContactForm = () => {
           </h2>
           <p className="text-[#909090] mt-3 text-sm md:text-base max-w-xl">
             Struggling with your dropshipping or eBay business? Our expert team is here to help. 
-            Fill out the form and we'll get back to you within 24 hours.
+            Fill out the form and we`ll get back to you within 24 hours.
           </p>
         </div>
         <hr className="hidden lg:block flex-1 max-w-xs mt-3 mb-4 ml-6 border-t border-[#ea8b61] opacity-70" />

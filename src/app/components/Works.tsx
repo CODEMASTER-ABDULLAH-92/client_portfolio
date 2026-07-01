@@ -79,7 +79,7 @@ const Works = () => {
             </h2>
             <p className="text-[#909090] mt-3 text-sm md:text-base max-w-xl">
               Specialized services for eBay sellers and dropshippers to optimize, grow, and protect their business.
-              We've helped hundreds of sellers achieve their goals.
+              We`ve helped hundreds of sellers achieve their goals.
             </p>
           </div>
 

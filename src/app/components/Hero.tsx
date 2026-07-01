@@ -28,7 +28,7 @@ const Hero = () => {
 
         {/* Bio / Introduction */}
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-snug sm:leading-tight md:leading-tight text-[#909090]">
-          Hi, I'm Waseem Riaz, <Image 
+          Hi, I`m Waseem Riaz, <Image 
               alt="waseem" 
               src={waseem} 
               className="h-10 w-10 md:h-20 md:w-20 rounded-full border-2 border-[#ea8b61] inline-block ml-2 align-middle" 
