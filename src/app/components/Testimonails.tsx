@@ -529,7 +529,7 @@ const test3 = [
 
 const Testimonials = () => {
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-12 md:py-16 lg:py-20">
+    <div id="success-stories" className="w-full max-w-7xl mx-auto px-4 py-12 md:py-16 lg:py-20">
       {/* Header Section */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 md:mb-14">
         <div>

@@ -1,84 +1,6 @@
-// import React from "react";
-// import Link from "next/link";
-// import { FaGithub, FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-
-// const Footer = () => {
-//   return (
-//     <footer className="bg-[#1f1f1f] text-gray-400 mt-20">
-//       {/* Divider */}
-//       <hr className="border-gray-700 opacity-40 mb-8" />
-
-//       {/* Top Section */}
-//       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0 pb-6">
-//         {/* Brand */}
-//         <Link
-//           className="text-white font-semibold text-2xl tracking-wide hover:opacity-80 transition text-center sm:text-left"
-//           href="/"
-//         >
-//           Waseem{" "}
-//           <span className="bg-[#ea8b61] text-black py-[1px] px-2 rounded-md">
-//             Riaz
-//           </span>
-//         </Link>
-
-//         {/* Social Links */}
-//         <div className="flex flex-wrap justify-center sm:justify-end items-center gap-5 text-lg">
-//           <Link
-//             href="https://github.com/CODEMASTER-ABDULLAH-92/"
-//             target="_blank"
-//             className="hover:text-[#ea8b61] transition-colors"
-//           >
-//             <FaGithub />
-//           </Link>
-
-//           <Link
-//             href="https://www.facebook.com/share/17Jfupzu4K/"
-//             target="_blank"
-//             className="hover:text-[#ea8b61] transition-colors"
-//           >
-//             <FaFacebookF />
-//           </Link>
-
-//           <Link
-//             href="https://www.instagram.com/waseemriaz.134?igsh=YzljYTk1ODg3Zg=="
-//             target="_blank"
-//             className="hover:text-[#ea8b61] transition-colors"
-//           >
-//             <FaInstagram />
-//           </Link>
-
-//           <Link
-//             href="https://www.linkedin.com/in/waseem-riaz-935798243/"
-//             target="_blank"
-//             className="hover:text-[#ea8b61] transition-colors"
-//           >
-//             <FaLinkedinIn />
-//           </Link>
-//         </div>
-//       </div>
-
-//       {/* Bottom Section */}
-//       <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
-//         <div className="flex flex-col  sm:flex-row justify-center  items-center gap-2 pb-6 text-xs sm:text-sm text-gray-500 text-center">
-//           <span>
-//             © {new Date().getFullYear()} <Link href={"https://github.com/CODEMASTER-ABDULLAH-92"}> | Coded with{" "}
-//             <span className="text-[#ea8b61]">❤</span> by Abdullah. </Link> All rights
-//             reserved.
-//           </span>
-//         </div>
-//       </div>
-//     </footer>
-//   );
-// };
-
-// export default Footer;
-
-
-
 import React from "react";
 import Link from "next/link";
 import { FaGithub, FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaTiktok, FaTwitter } from "react-icons/fa";
-import { SiEbay } from "react-icons/si";
 
 const Footer = () => {
   return (
@@ -87,7 +9,7 @@ const Footer = () => {
       <hr className="border-gray-700 opacity-40 mb-8" />
 
       {/* Top Section */}
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0 pb-6">
+      <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 flex flex-col sm:flex-row justify-between items-center gap-6 sm:gap-0 pb-6">
         {/* Brand */}
         <Link
           className="text-white font-semibold text-2xl tracking-wide hover:opacity-80 transition text-center sm:text-left"
@@ -136,62 +58,39 @@ const Footer = () => {
           >
             <FaGithub />
           </Link>
-
-          <Link
-            href="https://www.youtube.com/"
-            target="_blank"
-            className="hover:text-[#ea8b61] transition-colors"
-            aria-label="YouTube"
-          >
-            <FaYoutube />
-          </Link>
-
-          <Link
-            href="https://www.tiktok.com/"
-            target="_blank"
-            className="hover:text-[#ea8b61] transition-colors"
-            aria-label="TikTok"
-          >
-            <FaTiktok />
-          </Link>
-
-          <Link
-            href="https://www.ebay.com/"
-            target="_blank"
-            className="hover:text-[#ea8b61] transition-colors"
-            aria-label="eBay"
-          >
-            <SiEbay />
-          </Link>
         </div>
       </div>
 
       {/* Middle Section - Services & Links */}
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16 py-8 border-t border-gray-700/30">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16 py-8 border-t border-gray-700/30">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
           {/* Services */}
           <div>
             <h3 className="text-white font-semibold text-sm mb-4">Our Services</h3>
             <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/services/ebay-management" className="hover:text-[#ea8b61] transition-colors">
-                  eBay Account Management
-                </Link>
+              <li className="hover:text-[#ea8b61] transition-colors cursor-default">
+                eBay Account Management
               </li>
-              <li>
-                <Link href="/services/listing-optimization" className="hover:text-[#ea8b61] transition-colors">
-                  Listing Optimization
-                </Link>
+              <li className="hover:text-[#ea8b61] transition-colors cursor-default">
+                Listing Optimization
               </li>
-              <li>
-                <Link href="/services/product-sourcing" className="hover:text-[#ea8b61] transition-colors">
-                  Product Sourcing
-                </Link>
+              <li className="hover:text-[#ea8b61] transition-colors cursor-default">
+                Product Sourcing
               </li>
-              <li>
-                <Link href="/services/dropshipping-setup" className="hover:text-[#ea8b61] transition-colors">
-                  Dropshipping Setup
-                </Link>
+              <li className="hover:text-[#ea8b61] transition-colors cursor-default">
+                Dropshipping Setup
+              </li>
+              <li className="hover:text-[#ea8b61] transition-colors cursor-default">
+                eBay Store Design
+              </li>
+              <li className="hover:text-[#ea8b61] transition-colors cursor-default">
+                SEO & Keyword Research
+              </li>
+              <li className="hover:text-[#ea8b61] transition-colors cursor-default">
+                Order Fulfillment
+              </li>
+              <li className="hover:text-[#ea8b61] transition-colors cursor-default">
+                Customer Support
               </li>
             </ul>
           </div>
@@ -201,22 +100,17 @@ const Footer = () => {
             <h3 className="text-white font-semibold text-sm mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/about" className="hover:text-[#ea8b61] transition-colors">
+                <Link href="#" className="hover:text-[#ea8b61] transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/portfolio" className="hover:text-[#ea8b61] transition-colors">
+                <Link href="#success-stories" className="hover:text-[#ea8b61] transition-colors">
                   Success Stories
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-[#ea8b61] transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="hover:text-[#ea8b61] transition-colors">
+                <Link href="#contact_form" className="hover:text-[#ea8b61] transition-colors">
                   Contact Us
                 </Link>
               </li>
@@ -224,31 +118,7 @@ const Footer = () => {
           </div>
 
           {/* Resources */}
-          <div>
-            <h3 className="text-white font-semibold text-sm mb-4">Resources</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/guides/dropshipping-beginners" className="hover:text-[#ea8b61] transition-colors">
-                  Dropshipping Guide
-                </Link>
-              </li>
-              <li>
-                <Link href="/guides/ebay-policy" className="hover:text-[#ea8b61] transition-colors">
-                  eBay Policy Guide
-                </Link>
-              </li>
-              <li>
-                <Link href="/tools" className="hover:text-[#ea8b61] transition-colors">
-                  Recommended Tools
-                </Link>
-              </li>
-              <li>
-                <Link href="/faq" className="hover:text-[#ea8b61] transition-colors">
-                  FAQ
-                </Link>
-              </li>
-            </ul>
-          </div>
+
 
           {/* Contact Info */}
           <div>
@@ -280,27 +150,14 @@ const Footer = () => {
       </div>
 
       {/* Bottom Section */}
-      <div className="max-w-6xl mx-auto px-6 sm:px-10 lg:px-16">
+      <div className="max-w-8xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex flex-col sm:flex-row justify-between items-center gap-3 pb-6 text-xs sm:text-sm text-gray-500 border-t border-gray-700/30 pt-6">
           <span>
             © {new Date().getFullYear()} <strong className="text-white">Dropshipping Experts</strong> - 
             Empowering eBay Sellers & Dropshippers Worldwide
           </span>
           
-          <div className="flex gap-4">
-            <Link href="/privacy" className="hover:text-[#ea8b61] transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-[#ea8b61] transition-colors">
-              Terms of Service
-            </Link>
-            <Link href="/sitemap" className="hover:text-[#ea8b61] transition-colors">
-              Sitemap
-            </Link>
-          </div>
-        </div>
-
-        {/* Developer Credit */}
+ {/* Developer Credit */}
         <div className="flex flex-col items-center justify-center pb-4 text-xs text-gray-600">
           <span>
             Designed & Developed with{" "}
@@ -314,6 +171,8 @@ const Footer = () => {
             </Link>
           </span>
         </div>
+        </div>
+
       </div>
     </footer>
   );
