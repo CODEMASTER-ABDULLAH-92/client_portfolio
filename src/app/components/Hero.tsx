@@ -53,7 +53,7 @@ const Hero = () => {
         {/* Awards Section */}
         <div className="flex flex-col sm:flex-row sm:flex-wrap justify-start items-start gap-4 mt-10 sm:mt-12 md:mt-14">
           {[
-            "Top-Rated Virtual Assistant",
+            "Top-Rated Seller",
             "eBay Consultant",
             "Dropshipping Expert",
           ].map((award, index) => (
@@ -108,7 +108,7 @@ title: "Product Research",
 description: "Expert in product research across Amazon, Walmart, and eBay, with experience in Amazon order processing, product sourcing, market analysis, and efficient order fulfillment."
             },
             {
-              title: "eBay Virtual Assistance",
+              title: "eBay Consultant",
               description: "Specialized in eBay account handling, listing optimization, negative feedback removal, and customer dispute resolution."
             },
             {

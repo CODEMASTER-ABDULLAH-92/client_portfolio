@@ -31,6 +31,7 @@ const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes} ${ampm}`;
           <span className="bg-[#ea8b61] text-black py-[1px] px-2 rounded-md">
             Riaz
           </span>
+
         </Link>
 
         {/* Time + Menu */}
@@ -49,10 +50,12 @@ const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes} ${ampm}`;
               onClick={() => setOpenPopUp(true)}
             />
           )}
+
         </div>
       </div>
 
       {/* Pop-up Section */}
+
       <div
         className={`absolute z-10 right-6 md:right-12 mt-3 bg-[#1f1f1f] border border-[#2e2e2e] rounded-2xl px-6 py-4 w-[80%] sm:w-[300px] transform transition-all duration-300 ease-in-out ${
           openPopUp
@@ -68,7 +71,7 @@ const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes} ${ampm}`;
           <Link href="https://www.linkedin.com/in/waseem-riaz-935798243/" className="text-lg hover:underline">
             LinkedIn
           </Link>
-          <Link href="https://github.com/waseemriazoffical-svg" className="text-lg hover:underline">
+          <Link href="https://github.com/CODEMASTER-ABDULLAH-92" className="text-lg hover:underline">
             GitHub
           </Link>
           <Link href="https://www.instagram.com/waseemriaz.134?igsh=YzljYTk1ODg3Zg==" className="text-lg hover:underline">
@@ -83,6 +86,11 @@ const formattedTime = `${hours.toString().padStart(2, "0")}:${minutes} ${ampm}`;
           <li className="text-white hover:underline text-lg">
             +92 3424886134
           </li>
+          <span>
+            <span>
+              
+            </span>
+          </span>
           <li className="text-white hover:underline text-lg">
             waseemriazoffical@gmail.com
           </li>

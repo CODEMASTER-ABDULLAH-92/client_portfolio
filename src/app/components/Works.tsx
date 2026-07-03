@@ -3,7 +3,12 @@ import React, { useRef } from "react";
 import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
+import acct from "../../../public/acct.jpeg"
+import customer from "../../../public/customer.jpeg"
+import defect from "../../../public/defectremove.jpeg"
+import listOp from "../../../public/listOptimazation.jpeg"
+import neg from "../../../public/negfee.jpeg"
+import sus from "../../../public/sus.jpeg"
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
@@ -13,7 +18,7 @@ const projects = [
     id: 1,
     title: "eBay Account Creation & Setup",
     desc: "Complete eBay account creation with business verification, store setup, and initial listing configuration for dropshipping success.",
-    img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&auto=format&q=80",
+    img: acct,
     tags: ["Account Setup", "eBay", "Verification"],
     link: "#",
     result: "100+ accounts created"
@@ -22,16 +27,16 @@ const projects = [
     id: 2,
     title: "eBay Defect Removal Service",
     desc: "Expert removal of account defects, policy violations, and performance issues to restore Top-Rated Seller status and boost sales.",
-    img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&h=600&fit=crop&auto=format&q=80",
+    img: defect,
     tags: ["Defect Removal", "Policy Compliance", "Performance"],
     link: "#",
-    result: "95% defect removal rate"
+    result: "100% defect removal rate"
   },
   {
     id: 3,
     title: "Negative Feedback Removal",
     desc: "Professional strategy to identify, respond to, and remove negative feedback professionally to protect your eBay reputation.",
-    img: "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop&auto=format&q=80",
+    img: neg,
     tags: ["Feedback Removal", "Reputation", "Customer Service"],
     link: "#",
     result: "90% feedback resolution"
@@ -40,28 +45,28 @@ const projects = [
     id: 4,
     title: "eBay Customer Support Solutions",
     desc: "24/7 customer support management for eBay stores including message handling, dispute resolution, and customer satisfaction strategies.",
-    img: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop&auto=format&q=80",
+    img: customer,
     tags: ["Customer Support", "Dispute Resolution", "Management"],
     link: "#",
-    result: "98% customer satisfaction"
+    result: "100% customer satisfaction"
   },
   {
     id: 5,
     title: "eBay Listing Creation & Optimization",
     desc: "Professional eBay listing creation with SEO-optimized titles, descriptions, high-quality images, and pricing strategies for maximum visibility.",
-    img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop&auto=format&q=80",
+    img: listOp,
     tags: ["Listing Creation", "SEO", "Optimization"],
     link: "#",
-    result: "300% increase in visibility"
+    result: "100% increase in visibility"
   },
   {
     id: 6,
     title: "eBay Account Suspension Recovery",
     desc: "Expert support to recover suspended eBay accounts with proper documentation, appeals, and compliance restoration strategies.",
-    img: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=800&h=600&fit=crop&auto=format&q=80",
+    img: sus,
     tags: ["Suspension Recovery", "Appeals", "Compliance"],
     link: "#",
-    result: "85% recovery rate"
+    result: "100% recovery rate"
   },
 ];
 
