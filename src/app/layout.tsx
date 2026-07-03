@@ -5,11 +5,11 @@ import { Toaster } from "react-hot-toast";
 
 
 export const metadata: Metadata = {
-  title: "Waseem | Virtual Assistant",
+  title: "Waseem | eBay Consultant",
   description:
-    "Amazon, eBay & Shopify Virtual Assistant helping sellers with product research, listings, order processing, customer support, inventory management, SEO optimization, and store growth strategies.",
+    "Amazon, eBay & Shopify Consultant helping sellers with product research, listings, order processing, customer support, inventory management, SEO optimization, and store growth strategies.",
   icons: {
-    icon: "/waseem.png", // This will automatically be used as the favicon
+    icon: "/waseem.png", 
   },
 };
 
